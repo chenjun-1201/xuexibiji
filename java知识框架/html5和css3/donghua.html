@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+{	width:100px;
+	height:100px;
+	background:red;
+	position:relative;
+	animation:mymove 5s infinite;
+	-webkit-animation:mymove 5s infinite; 
+}
+/* @keyframes myfirst{
+    from{background: red;}
+    to{background: yellow;}
+} */
+
+/* @keyframes myfirst
+{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+} */
+/* 
+@keyframes myfirst
+{
+0%   {background: red; left:0px; top:0px;}
+25%  {background: yellow; left:200px; top:0px;}
+50%  {background: blue; left:200px; top:200px;}
+75%  {background: green; left:0px; top:200px;}
+100% {background: red; left:0px; top:0px;}
+} */
+
+
+@keyframes mymove
+{
+	0%   {top:0px; left:0px; background:red;}
+	25%  {top:0px; left:100px; background:blue;}
+	50%  {top:100px; left:100px; background:yellow;}
+	75%  {top:100px; left:0px; background:green;}
+	100% {top:0px; left:0px; background:red;}
+}
+
+
+    </style>
+</head>
+<body>
+    
+<div></div>
+
+
+</body>
+</html>

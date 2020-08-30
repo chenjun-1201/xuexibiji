@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    #demo1 {
+        /*
+        
+        */
+        width: 130px;
+        height: 130px;
+
+
+        /*
+         * 开启box1的绝对定位
+         */
+        position: absolute;
+    }
+</style>
+
+
+<body style="width: 1000px ; height: 2000px;">
+
+    <!-- <img src="./13a17.jpg" id="demo1" onmousemove=""> -->
+
+    <div style="left: 300;"><input id="demo2"></div>
+    <a href="www.baidu.com">前往百度</a>
+    <script>
+
+        window.onload = function () {
+
+            var input = document.getElementById("demo2");
+
+            input.onkeydown = function (event) {
+
+                // console.log(event.keyCode);
+                if (event.keyCode === 89 && event.shiftKey) {//判断y键和shift键是否同时按下
+                    alert("同时按下了y和shift");
+                }
+
+                    //判断keycode，如果输入的是中文，取消默认行为
+                if (event.keyCode >= 48 && event.keyCode <= 57) {
+
+                    return false;//取消默认行为
+
+                }
+            }
+
+            document.getElementsByTagName("a")[0].onclick = function () {
+
+                return false;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

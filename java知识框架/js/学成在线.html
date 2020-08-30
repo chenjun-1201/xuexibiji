@@ -1,0 +1,563 @@
+<!-- 这个代码是demo7笔记里的实例代码，请结合demo7笔记查看 -->
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1597573249942'); /* IE9 */
+  src: url('iconfont.eot?t=1597573249942#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1597573249942') format('woff'),
+  url('iconfont.ttf?t=1597573249942') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1597573249942#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  color: #fff;
+  background-color: #00a4ff;
+  font-size: 26px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f3f5f7;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #070707;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            height: 42px;
+            margin: 30px auto;
+        }
+
+        .logo {
+            width: 206px;
+            height: 36px;
+            
+            float: left;
+        }
+        .logo img{
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .nav {
+            float: left;
+            margin-left: 60px;
+        }
+
+        .nav ul li {
+            float: left;
+            margin: 0px 15px;
+        }
+
+        .nav ul li a {
+            display: block;
+            padding: 5px 10px;
+            height: 32px;
+            font-size: 18px;
+            line-height: 42px;
+        }
+
+        .nav ul li a:hover {
+            border-bottom: 2px solid #00a4ff;
+            color: #00a4ff;
+        }
+
+        .search {
+            height: 42px;
+            width: 412px;
+            float: left;
+            margin-left: 70px;
+        }
+
+        .search form .text {
+            width: 345 px;
+            height: 40px;
+            border: 1px solid #00a4ff;
+            border-right: none;
+            color: #bfbfbf;
+            font-size: 14px;
+            padding-left: 15px;
+            float: left;
+        }
+
+        .search form button {
+            width: 50px;
+            height: 42px;
+            border: none;
+            float: left;
+            
+        }
+
+        .user {
+            float: right;
+            line-height: 42px;
+            margin-right: 30px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .banner {
+            height: 421px;
+            background-color: #1c036c;
+        }
+
+        .banner .w {
+            height: 421px;
+            background: url(lunbotu.jpg) no-repeat center center;
+        }
+
+        .banner .w .subnav {
+            width: 190px;
+            height: 421px;
+            background: rgba(0, 0, 0, .3);
+            float: left;
+        }
+
+        .banner .w .subnav ul li a {
+            font-size: 14px;
+            color: white;
+        }
+
+        .subnav ul li {
+            height: 45px;
+            line-height: 45px;
+            padding: 0 20px;
+        }
+
+        .subnav ul li a span {
+            float: right;
+            font-weight: 700;
+        }
+
+        .banner .w .subnav ul li a:hover {
+            color: #00a4ff;
+        }
+
+        /* 课程表模块 */
+        .course {
+            width: 230px;
+            height: 300px;
+            float: right;
+            background-color: #fff;
+            margin-top: 50px;
+
+        }
+
+        .course h2 {
+            height: 48px;
+            background-color: #9bceea;
+            font-size: 18px;
+            text-align: center;
+            line-height: 48px;
+            color: #fff;
+        }
+
+        .body {
+            padding: 0 20px;
+        }
+
+        .body ul li {
+            padding: 14px 0;
+            border-bottom: 1px solid #a3a5a3;
+        }
+
+        .body ul li h4 {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .body ul li p {
+            font-size: 12px;
+            color: #a3a5a3;
+        }
+
+        .body a {
+            height: 38px;
+            border: 1px solid #00a4ff;
+            display: block;
+            text-align: center;
+            line-height: 38px;
+            margin: 5px 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #00a4ff;
+        }
+
+        /* goods部分 */
+        .goods {
+            height: 60px;
+            box-shadow: 0 2px 3px 3px rgba(0, 0, 0, .1);
+            margin-top: 10px;
+            line-height: 60px;
+        }
+
+        .goods h3 {
+            float: left;
+            margin-left: 30px;
+            font-size: 16px;
+            color: #00a4ff;
+        }
+
+        .goods ul {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .goods .mod {
+            float: right;
+            margin-right: 30px;
+            color: #00a4ff;
+            font-size: 14px;
+        }
+
+        .goods li {
+            float: left;
+
+
+        }
+
+        .goods ul li a {
+            font-size: 16px;
+            color: #000;
+            border-left: 1px solid #ccc;
+            padding: 0 30px;
+        }
+
+        /* 主题盒子部分 */
+
+        .box {
+            margin-top: 30px;
+        }
+
+        .box-head {
+            height: 45px;
+        }
+
+        .box .box-head h3 {
+            float: left;
+            font-size: 20px;
+            color: #494949;
+        }
+
+        .box .box-head a {
+            float: right;
+            font-size: 12px;
+            color: #a5a5a5;
+            margin-top: 10px;
+            margin-right: 30px;
+        }
+
+        .box-body ul {
+            width: 1225px;
+        }
+
+        /* 把li的父元素ul修改的足够宽，能装下5个盒子就可以不换行了 */
+        .box .box-body ul li {
+            width: 230px;
+            height: 270px;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        .box-body ul li img {
+            /* 这样可以防止图片超过父盒子 */
+            width: 100%;
+        }
+
+        .box-body ul li h4 {
+            margin: 20px 20px 20px 25px;
+            font-size: 14px;
+            color: #050505;
+            font-weight: 400;
+        }
+
+        .box-body ul li div {
+            margin: 0 20px 0 25px;
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .box-body ul li div span {
+            color: #ff7c2d;
+        }
+
+        /* footer区域制作 */
+        .footer {
+            height: 415px;
+            background-color: #fff;
+            overflow: hidden;
+            /* 时刻警惕外边距合并 */
+        }
+
+        .footer .w {
+            margin-top: 35px;
+        }
+
+        .footer .w .copyright {
+            float: left;
+        }
+
+
+        .copyright p {
+            font-size: 12px;
+            color: #666;
+            margin: 20px 0 15px 0;
+        }
+
+        .copyright a {
+            display: block;
+            width: 118px;
+            height: 33px;
+            border: 1px solid #00a4ff;
+            text-align: center;
+            line-height: 33px;
+            color: #00a4ff;
+            font-size: 16px;
+        }
+
+        .links {
+            float: right;
+        }
+
+        .links dl {
+            float: right;
+            margin-right: 100px;
+        }
+
+        .links dl dt {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        .links dl dd a {
+            color: #333;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 网页头部分 -->
+    <div class="header w">
+        <!-- logo部分 -->
+        <div class="logo"><img src="https://7n.w3cschool.cn/statics/images/logonew2.png" alt="logo" ></div>
+        <!-- 导航栏部分 -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">职业规划</a></li>
+            </ul>
+        </div>
+        <!-- 搜索栏部分 -->
+        <div class="search">
+            <form action="#">
+                <input type="text" class="text" value="输入关键词">
+                <button class="iconfont">&#xe6a3;</button>
+            </form>
+        </div>
+        <!-- 用户名部分 -->
+        <div class="user">
+            <img src="image/user.png" alt="user">
+            <span>用户名</span>
+        </div>
+    </div>
+    <!-- banner部分 -->
+    <div class="banner">
+        <div class="w">
+            <!-- subnav左侧侧边栏部分 -->
+            <div class="subnav">
+                <ul>
+                    <li><a href="#">前端开发 <span>&gt;</span></a> </li>
+                    <li><a href="#">后端开发 <span>&gt;</span></a></li>
+                    <li><a href="#">移动开发 <span>&gt;</span></a></li>
+                    <li><a href="#">人工智能 <span>&gt;</span></a></li>
+                    <li><a href="#">商业预测 <span>&gt;</span></a></li>
+                    <li><a href="#">巴拉巴拉 <span>&gt;</span></a></li>
+                    <li><a href="#">云计算大数据<span>&gt;</span></a></li>
+                    <li><a href="#">UI设计<span>&gt;</span></a></li>
+                    <li><a href="#">产品<span>&gt;</span></a></li>
+                </ul>
+            </div>
+            <!-- course课程表模块 -->
+            <div class="course">
+                <h2>我的课程表</h2>
+                <div class="body">
+                    <ul>
+                        <li>
+                            <h4>继续学习</h4>
+                            <p>正在学习-适用对象</p>
+                        </li>
+                        <li>
+                            <h4>继续学习</h4>
+                            <p>正在学习-适用对象
+                            </p>
+                        </li>
+                        <li>
+                            <h4>继续学习</h4>
+                            <p>正在学习-适用对象</p>
+                        </li>
+                    </ul>
+                    <a href="#">全部课程</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="goods w">
+        <h3>精品推荐</h3>
+        <ul>
+            <li><a href="#">test</a></li>
+            <li><a href="#">test</a></li>
+            <li><a href="#">test</a></li>
+            <li><a href="#">test</a></li>
+            <li><a href="#">test</a></li>
+        </ul>
+        <a href="#" class="mod">修改</a>
+    </div>
+    <!-- 核心内容区域 -->
+    <div class="box w">
+        <div class="box-head">
+            <h3>精品推荐</h3>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="box-body">
+            <ul class="clearfix">
+                <li><img src="java.jpg" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+                </li>
+                <li><img src="course1.jpg" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+                </li>
+                <li><img src="java.jpg" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="linux.jpg" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+                <li><img src="image/course.png" alt="course">
+                    <h4>HTML&CSS学习</h4>
+                    <div><span>高级</span>●3217人正在学习</div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- footer模块制作 -->
+    <div class="footer">
+        <div class="w">
+            <div class="copyright"><img src="image/logo.png" alt="logo">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br>
+                    © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="#">下载app</a>
+            </div>
+            <div class="links">
+                <dl>
+                    <dt>关于学生网1</dt>
+                    <dd><a href="#">关于1</a></dd>
+                    <dd><a href="#">关于2</a></dd>
+                    <dd><a href="#">关于3</a></dd>
+                    <dd><a href="#">关于4</a></dd>
+                    <dd><a href="#">关于5</a></dd>
+                    <dd><a href="#">关于6</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于学生网2</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                </dl>
+                <dl>
+                    <dt>关于学生网3</dt>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                    <dd><a href="#">关于</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

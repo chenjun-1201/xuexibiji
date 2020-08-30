@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标拖拽事件</title>
+    <style type="text/css">
+    img{
+        position: absolute;
+    }
+    </style>
+
+    <script>
+        window.onload=function(){
+            
+           
+                
+    var img= document.getElementsByTagName("img")[0];
+
+    img.addEventListener("click",
+        function(){
+        alert("sdfsdf");
+        }
+    );
+
+    img.onmousedown=function(event){
+    var  ol=event.clientX-img.offsetLeft;
+    var  ll=event.clientY-img.offsetTop;
+
+    document.onmousemove=function(event){
+
+         //div的偏移量 鼠标.clentX - 元素.offsetLeft
+        //div的偏移量 鼠标.clentY - 元素.offsetTop
+        
+        img.style.left=event.clientX-ol+"px";
+        img.style.top=event.clientY-ll+"px";
+
+    }
+}
+
+img.onmouseup=function(){
+    //拖拽功能
+document.onmousemove=null;
+
+
+img.onmouseup=null;
+    
+}
+        }
+
+
+    </script>
+</head>
+<body>
+    <img src="https://www.w3school.com.cn/i/eg_mouse2.jpg">
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16550167",
+      "name": "窗户-关",
+      "font_class": "chuanghu-guan",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "16550168",
+      "name": "门户-关",
+      "font_class": "menhu-guan",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "16550169",
+      "name": "空调-关",
+      "font_class": "kongtiao-guan",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "16550170",
+      "name": "挡板-关",
+      "font_class": "dangban-guan",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "16550171",
+      "name": "门户-开",
+      "font_class": "menhu-kai",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "16550172",
+      "name": "风机-关",
+      "font_class": "fengji-guan",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "16550174",
+      "name": "门禁-关",
+      "font_class": "menjin-guan",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    }
+  ]
+}
